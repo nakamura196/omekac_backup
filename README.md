@@ -1,19 +1,18 @@
-# Omeka S Back Up
+# Omeka Classic Back Up
 
 ## 設定
 
-以下の例を参考に`settings.yml`を作成してください。
+`.env.sample`ファイルおよび以下の例を参考に`.env`を作成してください。
 
-```YAML
-api_url: https://dev.omeka.org/omeka-s-sandbox/api
-output_dir: (出力フォルダへのフルパス。例：/Users/xxx/git/dataset/docs)
-key_identity: (Optional：空のままでもよい)
-key_credential: (Optional：空のままでもよい)
+```
+api_url=https://jinmoncom2017.omeka.net/api
+#key=
+output_dir=../docs
 ```
 
-`key_identity`と`key_credential`については、以下を参考に取得してください。
+`key`については、以下を参考に取得してください。
 
-https://omeka.org/s/docs/user-manual/admin/users/#api-key
+https://omeka.org/classic/docs/Admin/Settings/API_Settings/
 
 ## 実行
 
@@ -24,11 +23,4 @@ Python3の実行環境をご用意ください。
 ```
 cd src
 sh 100_download.sh
-```
-
-### Excel作成
-
-```
-cd src
-sh 102_createExcel.sh
 ```
